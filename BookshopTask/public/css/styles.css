@@ -1,0 +1,20 @@
+body {
+    background: pink;
+}
+
+.store-name {
+    padding: 20px;
+}
+
+.new {
+    font-size: 15px;
+    color: yellow;
+    background: red;
+    border-radius: 2px;
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: contain;
+    padding: 5px;
+}
