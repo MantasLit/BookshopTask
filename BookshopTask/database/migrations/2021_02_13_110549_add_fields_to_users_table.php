@@ -15,7 +15,7 @@ class AddFieldsToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('is_admin')->default('false');
-            $table->date('birth_date')->nullable();
+            $table->date('birth_date')->nullable()->default(null);
         });
     }
 
