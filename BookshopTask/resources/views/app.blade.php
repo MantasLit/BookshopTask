@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Book Shop</a>
+    <a class="navbar-brand" href="/">Book Shop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
             @endguest
             @auth
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Add new book</a>
+                    <a class="nav-link" href="{{route('addnewbook')}}">Add new book</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-secondary text-white" href="#"
@@ -49,8 +49,6 @@
         </form>
     </div>
 </nav>
-
-<h1 class="store-name">The Book Shop</h1>
 
 @yield('content');
 

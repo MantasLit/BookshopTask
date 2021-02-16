@@ -1,6 +1,7 @@
 @extends ('app')
 
 @section('content')
+    <h1 class="store-name">The Book Shop</h1>
     <div class="container-fluid">
         <div class="row d-flex">
             @for ($i =1; $i <= 25; $i++)
