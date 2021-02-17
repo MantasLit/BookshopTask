@@ -25,8 +25,14 @@ class HomeController extends Controller
     {
         return view('/index');
     }
+
     public function addnewbook()
     {
         return view('/addnewbook');
+    }
+
+    public function singlebook()
+    {
+        return view('/singlebook');
     }
 }

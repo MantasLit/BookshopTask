@@ -15,6 +15,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/singlebook', [HomeController::class, 'singlebook'])->name('singlebook');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/addnewbook', [HomeController::class, 'addnewbook'])->name('addnewbook');
