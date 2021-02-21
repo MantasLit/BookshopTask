@@ -19,6 +19,7 @@ Route::get('/singlebook', [HomeController::class, 'singlebook'])->name('singlebo
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/addnewbook', [HomeController::class, 'addnewbook'])->name('addnewbook');
+    Route::get('/accountinfo', [HomeController::class, 'accountinfo'])->name('accountinfo');
 });
 
 Auth::routes();

@@ -31,6 +31,11 @@ class HomeController extends Controller
         return view('/addnewbook');
     }
 
+    public function accountinfo()
+    {
+        return view('/accountinfo');
+    }
+
     public function singlebook()
     {
         return view('/singlebook');
