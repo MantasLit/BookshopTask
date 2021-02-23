@@ -34,20 +34,21 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{route('addnewbook')}}">Add new book</a>
                 </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More Option
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{route('accountinfo')}}">Change account info</a>
-                            <a class="nav-link btn btn-secondary text-white" href="#"
-                               onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Log out</a>
-                            <form action="{{route('logout')}}" method="POST" id="logout-form">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Option
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{route('accountinfo')}}">Change account info</a>
+                        <a class="nav-link btn btn-secondary text-white" href="#"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Log out</a>
+                        <form action="{{route('logout')}}" method="POST" id="logout-form">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
             @endauth
         </ul>
         <form class="form-inline my-2 my-lg-0">

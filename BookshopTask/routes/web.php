@@ -17,7 +17,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/singlebook', [HomeController::class, 'singlebook'])->name('singlebook');
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => ['auth', 'admin']], function () {
+    Route::get('/admin-view', [HomeController::class, 'adminview'])->name('adminview');
     Route::get('/addnewbook', [HomeController::class, 'addnewbook'])->name('addnewbook');
     Route::get('/accountinfo', [HomeController::class, 'accountinfo'])->name('accountinfo');
 });
