@@ -8,10 +8,9 @@
         <h3 class="d-flex justify-content-center">{{date('Y-m-d')}}</h3>
     @endauth
     <div class="container">
-        <div class="row d-flex">
-            <div class="col">
-                @foreach($books as $key => $data)
-                    <div class="card mt-4  mb-4" style="width: 195px">
+        <div class="row d-flex justify-content-center">
+            @foreach($books as $key => $data)
+                    <div class="card m-3" style="width: 195px">
                         <a href="{{route('singlebook')}}">
                             <img class="card-img-top" src="{{asset('img/book.jpg')}}" alt="Card image cap">
                         </a>
@@ -23,8 +22,7 @@
                             <p class="price">Price: {{$data->price}} €</p>
                         </div>
                     </div>
-                @endforeach
-            </div>
+            @endforeach
         </div>
     </div>
     <ul class="pagination d-flex justify-content-center">

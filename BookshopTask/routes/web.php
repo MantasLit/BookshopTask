@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BooksController;
+use App\Http\Controllers\AuthorsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,8 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/addnewbook', [HomeController::class, 'addnewbook'])->name('addnewbook');
     Route::get('/accountinfo', [HomeController::class, 'accountinfo'])->name('accountinfo');
 });
+
+Route::post('/create', [BooksController::class, 'store']);
 
 Auth::routes();
 
